@@ -1,99 +1,162 @@
-import React from 'react'
-import { useManagedSite } from '../lib/ManagedSiteContext'
+import React, { useState } from 'react'
+import brandVideo from '../../Untitled_Scene_11-04_16_49_36_20261104215102.mp4'
 
 export default function EditorialBanners() {
-  const { getPublishedContent, resolveImage, isContentEnabled } = useManagedSite()
-  const everyday = getPublishedContent('home.editorial.everyday') || {}
-  const formal = getPublishedContent('home.editorial.formal') || {}
-  const sherwani = getPublishedContent('home.editorial.sherwani') || {}
-  const image = (content, key, fallback) => resolveImage(content.image_key || key, fallback)
+  const [isPlaying, setIsPlaying] = useState(false)
+
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8" data-purpose="editorial-campaign-grid">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-        
-        {/* Large Left Card: Street Wear / Everyday Essentials (Spanning full height) */}
-        {isContentEnabled('home.editorial.everyday') && <div className="lg:col-span-7 bg-[#EFEFEF] relative min-h-110 lg:min-h-135 flex items-center p-8 sm:p-12 overflow-hidden group">
-          <img
-            alt={everyday.alt_text || 'Little Street Wear Campaign'}
-            className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-90 mix-blend-multiply"
-            src={image(everyday, 'home.editorial.everyday', 'https://lh3.googleusercontent.com/aida-public/AB6AXuBrokJeVORIhZLZ6UivfcbgwJVi4NqQjc5Cdoc4Wd0zfx2A40QymK6lAKzIgExApQLGiKtm0cuFtPr05CgV-jd3VY2svEPKXkxC6hiUSmraBEnEz1wdb0dX16xVAG2BETbTOF6eAgrwXlM-rlUQ67Mj23JWn-_n4NbCs6UdzVX5qbfnOumABQ78zhdepO42SUTFJO_rKg1BfTHQdSkszhg6Wmj6T9DfbMhz3YFBaW_aknh2h_CXT6cT')}
-          />
-          <div className="relative z-10 max-w-sm bg-white/80 backdrop-blur-sm p-6 sm:p-8">
-            <span className="text-[10px] uppercase tracking-widest text-brand-gray font-semibold block mb-2">
-              {everyday.tag || 'Casual Collection'}
-            </span>
-            <h3 className="text-3xl sm:text-4xl font-bold tracking-tight text-brand-black mb-3">
-              {everyday.headline || 'Little Street Wear.'}
-            </h3>
-            <p className="text-xs text-brand-gray leading-relaxed mb-6 font-normal">
-              {everyday.description || 'Everyday essentials crafted with ultra-soft organic cotton for effortless little adventures.'}
-            </p>
-            <a
-              className="inline-flex items-center text-xs font-semibold uppercase tracking-wider text-brand-black hover:text-neutral-600 group-link"
-              href={everyday.link_href || '#/casual-dressing'}
-            >
-              {everyday.link_text || 'Shop Collection'}
-              <span className="ml-1.5 transition-transform group-hover:translate-x-1">→</span>
-            </a>
-          </div>
-        </div>}
+    <section className="w-full bg-[#2e0b19] text-white relative overflow-hidden py-12 sm:py-16 my-4 sm:my-8" data-purpose="artisanal-excellence-section">
+      {/* Background Subtle Luxury Dot Pattern & Ambient Glow */}
+      <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#ffdea7_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
+      <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-80 h-80 bg-[#ffdea7]/10 rounded-full blur-3xl pointer-events-none" />
 
-        {/* Right Column: 2 Stacked Cards */}
-        {(isContentEnabled('home.editorial.formal') || isContentEnabled('home.editorial.sherwani')) && <div className="lg:col-span-5 flex flex-col gap-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
-          {/* Upper Right Card: Classic Coat Pant */}
-          {isContentEnabled('home.editorial.formal') && <div className="bg-[#F5F5F7] p-8 flex-1 flex flex-col justify-between relative overflow-hidden group min-h-62.5">
-            <div className="relative z-10 max-w-60">
-              <span className="text-[10px] uppercase tracking-widest text-brand-muted font-semibold block mb-1">
-                {formal.tag || 'Tailored Sartorial'}
+          {/* Left Column: Brand Story (5 cols) */}
+          <div className="lg:col-span-5 flex flex-col justify-center">
+            {/* Eyebrow */}
+            <div className="inline-flex items-center gap-2 mb-2.5">
+              <svg className="w-3.5 h-3.5 text-[#ffdea7]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94A5.01 5.01 0 0011 15.9V19H7v2h10v-2h-4v-3.1a5.01 5.01 0 003.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z" />
+              </svg>
+              <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-[#ffdea7]">
+                ARTISANAL EXCELLENCE
               </span>
-              <h4 className="text-2xl font-bold text-brand-black tracking-tight mb-2">
-                {formal.headline || 'Classic Coat Pant.'}
-              </h4>
-              <p className="text-xs text-brand-gray mb-4">
-                {formal.description || 'A refined Italian-cut silhouette for special moments.'}
-              </p>
+            </div>
+
+            {/* Heading */}
+            <h2 className="text-3xl sm:text-4xl lg:text-[40px] text-white font-normal leading-[1.14] mb-3 font-serif" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
+              Made for Their Biggest Moments.
+            </h2>
+
+            {/* Concise Refined Copy */}
+            <p className="text-xs sm:text-sm text-[#ebd9dc] leading-relaxed mb-5 font-light max-w-md">
+              Ceremonial grandeur tailored with children’s natural ease—butter-soft linings and effortless heirloom silhouettes.
+            </p>
+
+            {/* 3 Concise Checkpoints */}
+            <div className="space-y-3 mb-6">
+              <div className="flex items-start gap-3">
+                <span className="w-5 h-5 rounded-full border border-[#ffdea7] text-[#ffdea7] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-bold">
+                  ✓
+                </span>
+                <div>
+                  <h4 className="text-white text-xs sm:text-sm font-semibold tracking-wide">
+                    Hand-Finished Collars
+                  </h4>
+                  <p className="text-[#d8c3c7] text-[11px] sm:text-xs mt-0.5 leading-snug font-light">
+                    Smooth, friction-free necklines tailored for sensitive skin.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <span className="w-5 h-5 rounded-full border border-[#ffdea7] text-[#ffdea7] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-bold">
+                  ✓
+                </span>
+                <div>
+                  <h4 className="text-white text-xs sm:text-sm font-semibold tracking-wide">
+                    Hypoallergenic Silk-Cotton Linings
+                  </h4>
+                  <p className="text-[#d8c3c7] text-[11px] sm:text-xs mt-0.5 leading-snug font-light">
+                    Breathable natural fibers that keep children cool all day.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <span className="w-5 h-5 rounded-full border border-[#ffdea7] text-[#ffdea7] flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-bold">
+                  ✓
+                </span>
+                <div>
+                  <h4 className="text-white text-xs sm:text-sm font-semibold tracking-wide">
+                    Complimentary Doorstep Alterations
+                  </h4>
+                  <p className="text-[#d8c3c7] text-[11px] sm:text-xs mt-0.5 leading-snug font-light">
+                    Doorstep pickup and re-tailoring across Pakistan for a flawless fit.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* High-Contrast Bold CTA Button */}
+            <div>
               <a
-                className="text-xs font-semibold uppercase tracking-wider text-brand-black hover:underline flex items-center gap-1"
-                href={formal.link_href || '#/coat-pant'}
+                href="#/sherwani"
+                className="inline-flex items-center gap-2 bg-[#ffdea7] hover:bg-[#fad38e] font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded shadow-lg transition-transform hover:scale-[1.02] active:scale-[0.98]"
+                style={{ color: '#260714', textDecoration: 'none' }}
               >
-                Explore Collection →
+                <span style={{ color: '#260714', fontWeight: '700' }}>SHOP OCCASION WEAR</span>
+                <span style={{ color: '#260714', fontWeight: '700' }} className="transition-transform group-hover:translate-x-1">→</span>
               </a>
             </div>
-            <img
-              alt={formal.alt_text || 'Boy in tailored coat pant suit'}
-              className="absolute right-0 top-0 bottom-0 w-1/2 object-cover object-center group-hover:scale-105 transition-transform duration-500"
-              src={image(formal, 'home.hero.formal', 'https://lh3.googleusercontent.com/aida-public/AB6AXuAOHZj7Sep-7290IsgdzITdlnbtIx0TGNaA-iXSGMyu6RrqjvDbWlcExEEXGAjA_X2uQn1HuhdY7Ec1RWTRp34OkCT3M8mpOhFuYxIl0E_I7LHBx_ORIByEqdXuu94Ye4sRA04V6bbTCrIQVN0IRve6ylZ8tCBSX9sXTbxnVrW1CtO65TqU88u9mUrOWtTAxF9-yMP_mjxqdwgp61w8RsmaHSDPgZyzxfa-SuU04I4u5IsH6fi218oj')}
-            />
-          </div>}
+          </div>
 
-          {/* Lower Right Card: Traditional Elegance (Sherwani / Festive) */}
-          {isContentEnabled('home.editorial.sherwani') && <div className="bg-[#ECEAE6] p-8 flex-1 flex flex-col justify-between relative overflow-hidden group min-h-62.5">
-            <div className="relative z-10 max-w-60">
-              <span className="text-[10px] uppercase tracking-widest text-brand-muted font-semibold block mb-1">
-                {sherwani.tag || 'Heritage Edition'}
-              </span>
-              <h4 className="text-2xl font-bold text-brand-black tracking-tight mb-2">
-                {sherwani.headline || 'Traditional Elegance.'}
-              </h4>
-              <p className="text-xs text-brand-gray mb-4">
-                {sherwani.description || 'Handcrafted festive Sherwanis with subtle threadwork.'}
-              </p>
-              <a
-                className="text-xs font-semibold uppercase tracking-wider text-brand-black hover:underline flex items-center gap-1"
-                href={sherwani.link_href || '#/sherwani'}
-              >
-                Explore Formal Wear →
-              </a>
+          {/* Right Column: Video Campaign Frame (7 cols) */}
+          <div className="lg:col-span-7">
+            <div className="relative w-full aspect-[16/10] rounded-xl overflow-hidden shadow-2xl bg-black border border-white/10 group">
+              {isPlaying ? (
+                <div className="relative w-full h-full">
+                  <video
+                    src={brandVideo}
+                    autoPlay
+                    controls
+                    playsInline
+                    className="w-full h-full object-cover"
+                    style={{ filter: 'brightness(1.12)' }}
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setIsPlaying(false)}
+                    className="absolute top-3 right-3 bg-black/70 hover:bg-black text-white rounded-full p-2 text-xs z-20 backdrop-blur-sm transition-colors cursor-pointer"
+                    aria-label="Close video"
+                  >
+                    ✕
+                  </button>
+                </div>
+              ) : (
+                <div className="relative w-full h-full">
+                  <img
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY-vkRs7guZ-tZD_X6T4NVabt3-0CDv65AMBfjDXK4mYne1FVh0kieO9MRGnDq42TbIISamdlXgWb93ZUa-7kQLZ2NkibhC7whUYLcM0iWLX3C5oriCh6EyEaiu2rRzgbFlLRepdhUSOd9MkNL0up3CtH7bKHkRykevWXJsoCXLYybBKEggnaji9ig5k34wvMZliN5nXZFMlbG7U1k2Rbr7HXI9e_w5sOBaz3uoYnWmqP6GL5vVXJS"
+                    alt="Little Star brand film: father fitting ivory sherwani and turban on his son"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    style={{ filter: 'brightness(1.08)' }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent pointer-events-none" />
+
+                  {/* Perfectly Centered Luxury Play Button */}
+                  <button
+                    type="button"
+                    onClick={() => setIsPlaying(true)}
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white text-[#3a1021] flex items-center justify-center shadow-2xl ring-8 ring-white/20 hover:ring-white/35 transition-all duration-300 hover:scale-110 cursor-pointer focus:outline-none"
+                    style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
+                    aria-label="Play brand film"
+                  >
+                    <span className="text-xl sm:text-2xl ml-1 font-bold text-[#3a1021]">
+                      ▶
+                    </span>
+                  </button>
+
+                  {/* Bottom Video Metadata Ribbon */}
+                  <div className="absolute bottom-3 inset-x-3 sm:bottom-4 sm:inset-x-4 bg-[#260714]/85 backdrop-blur-md px-4 py-2.5 rounded-lg flex items-center justify-between text-white border border-white/10 pointer-events-none">
+                    <div className="flex items-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+                      <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#ffdea7]">
+                        FILM: “THE LITTLE NAWAB” (02:45)
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2 text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#d8c3c7]">
+                      <span className="tracking-widest">|||·|||·|</span>
+                      <span>HQ SOUND</span>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
-            <img
-              alt={sherwani.alt_text || "Festive traditional children's wear"}
-              className="absolute right-0 top-0 bottom-0 w-1/2 object-cover object-center group-hover:scale-105 transition-transform duration-500"
-              src={image(sherwani, 'home.editorial.sherwani', 'https://lh3.googleusercontent.com/aida-public/AB6AXuDi5XjgVAm49nLl3SG-Cv4VhO8UarmBdhkomskNtwMHHSqRW4WxgCXj0lYTznetTQ4YdpGFZx5a3GWrghwgHsGJdjfR9riJYevfRm_Q_PPer7qMEw5TPJ2Jj01HmSU8MEwJVMXsrtAlZEa1kgGw0MAr6psC8qnf0MBoC6A3RWJaZPLH0eF_CfvP7QLymE-ALK14G8nXvJj7upPcM3Ji2MvLn_Bw_tF97bBWQIAbhP93atG5jbSGydTL')}
-            />
-          </div>}
+          </div>
 
-        </div>}
+        </div>
       </div>
     </section>
   )

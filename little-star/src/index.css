@@ -33,6 +33,7 @@ body {
 
 .hero-video-media {
   object-position: center;
+  filter: brightness(1.12);
 }
 
 .hero-video-fallback {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useManagedSite } from '../lib/ManagedSiteContext'
-import heroVideo from '../../Boy_modeling_luxury_children_clo…_20261022014147.mp4'
+import heroVideo from '../../Untitled_Scene_11-04_16_49_36_20261104215102.mp4'
 
 const SLIDES = [
   {
@@ -47,6 +47,7 @@ export default function HeroBanner() {
       />
       <video
         className="hero-video-media ls-hero-media"
+        style={{ filter: 'brightness(1.12)' }}
         autoPlay={!prefersReducedMotion}
         loop
         muted
