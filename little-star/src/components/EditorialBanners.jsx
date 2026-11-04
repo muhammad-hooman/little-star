@@ -7,7 +7,7 @@ export default function EditorialBanners() {
   return (
     <section className="w-full bg-[#2e0b19] text-white relative overflow-hidden py-12 sm:py-16 my-4 sm:my-8" data-purpose="artisanal-excellence-section">
       {/* Background Subtle Luxury Dot Pattern & Ambient Glow */}
-      <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#ffdea7_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
+      <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#ffdea7_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
       <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-80 h-80 bg-[#ffdea7]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -95,7 +95,7 @@ export default function EditorialBanners() {
 
           {/* Right Column: Video Campaign Frame (7 cols) */}
           <div className="lg:col-span-7">
-            <div className="relative w-full aspect-[16/10] rounded-xl overflow-hidden shadow-2xl bg-black border border-white/10 group">
+            <div className="relative w-full aspect-8/5 rounded-xl overflow-hidden shadow-2xl bg-black border border-white/10 group">
               {isPlaying ? (
                 <div className="relative w-full h-full">
                   <video
@@ -123,17 +123,17 @@ export default function EditorialBanners() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     style={{ filter: 'brightness(1.08)' }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/10 to-transparent pointer-events-none" />
 
                   {/* Perfectly Centered Luxury Play Button */}
                   <button
                     type="button"
                     onClick={() => setIsPlaying(true)}
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white text-[#3a1021] flex items-center justify-center shadow-2xl ring-8 ring-white/20 hover:ring-white/35 transition-all duration-300 hover:scale-110 cursor-pointer focus:outline-none"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white text-brand-black flex items-center justify-center shadow-2xl ring-8 ring-white/20 hover:ring-white/35 transition-all duration-300 hover:scale-110 cursor-pointer focus:outline-none"
                     style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
                     aria-label="Play brand film"
                   >
-                    <span className="text-xl sm:text-2xl ml-1 font-bold text-[#3a1021]">
+                    <span className="text-xl sm:text-2xl ml-1 font-bold text-brand-black">
                       ▶
                     </span>
                   </button>

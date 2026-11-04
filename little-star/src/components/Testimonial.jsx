@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { TESTIMONIALS } from '../data/products'
 
 const ENRICHED_REVIEWS = [
   {
@@ -69,12 +68,12 @@ export default function Testimonial() {
 
   return (
     <section 
-      className="w-full bg-[#fcf9f8] text-[#1c1b1b] relative overflow-hidden py-16 sm:py-24 my-8 sm:my-14 border-y border-[#e8dedf]" 
+      className="w-full bg-brand-surface text-brand-dark relative overflow-hidden py-16 sm:py-24 my-8 sm:my-14 border-y border-[#e8dedf]" 
       data-purpose="customer-testimonial"
     >
       {/* Background Subtle Luxury Dot Pattern & Warm Soft Ambient Glow */}
-      <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#b69966_1px,transparent_1px)] [background-size:26px_26px] pointer-events-none" />
-      <div className="absolute left-1/2 top-0 -translate-x-1/2 w-[700px] h-[350px] bg-[radial-gradient(circle,#faece4_0%,transparent_70%)] pointer-events-none" />
+      <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#b69966_1px,transparent_1px)] bg-[size:26px_26px] pointer-events-none" />
+      <div className="absolute left-1/2 top-0 -translate-x-1/2 w-175 h-87.5 bg-[radial-gradient(circle,#faece4_0%,transparent_70%)] pointer-events-none" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -88,7 +87,7 @@ export default function Testimonial() {
             <span className="text-xs text-[#b69966]">✦</span>
           </div>
           <h2 
-            className="text-2xl sm:text-3xl lg:text-4xl text-[#3a1021] font-normal leading-tight font-serif" 
+            className="text-2xl sm:text-3xl lg:text-4xl text-brand-black font-normal leading-tight font-serif" 
             style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
           >
             Cherished by Families Across Pakistan
@@ -96,7 +95,7 @@ export default function Testimonial() {
         </div>
 
         {/* The Luxury Gilded Maroon Card Stage */}
-        <div className="relative max-w-3xl mx-auto bg-gradient-to-b from-[#2e091a] via-[#240614] to-[#1c040f] border border-[#ffdea7]/30 rounded-2xl p-7 sm:p-12 shadow-[0_20px_60px_rgba(42,8,24,0.28)]">
+        <div className="relative max-w-3xl mx-auto bg-linear-to-b from-[#2e091a] via-[#240614] to-[#1c040f] border border-[#ffdea7]/30 rounded-2xl p-7 sm:p-12 shadow-[0_20px_60px_rgba(42,8,24,0.28)]">
           
           {/* Subtle Corner Gold Flourishes */}
           <div className="absolute top-3 left-3 w-3 h-3 border-t-2 border-l-2 border-[#ffdea7]/60 rounded-tl" />
@@ -140,7 +139,7 @@ export default function Testimonial() {
           </div>
 
           {/* The Testimonial Quote Body */}
-          <div className="py-6 sm:py-8 min-h-[120px] flex items-center justify-center text-center">
+          <div className="py-6 sm:py-8 min-h-30 flex items-center justify-center text-center">
             <p 
               className={`font-serif text-lg sm:text-2xl lg:text-[25px] text-white italic leading-relaxed font-normal transition-all duration-200 ${
                 isFading ? 'opacity-0 scale-[0.98]' : 'opacity-100 scale-100'
@@ -198,15 +197,15 @@ export default function Testimonial() {
         <div className="mt-12 pt-8 border-t border-[#e8dedf] grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-xs text-[#6b5e62]">
           <div className="flex items-center justify-center gap-2.5">
             <span className="text-[#b69966] text-base">★</span>
-            <span><strong className="text-[#1c1b1b]">4.9 / 5.0 Rating</strong> across 1,200+ milestone celebrations</span>
+            <span><strong className="text-brand-dark">4.9 / 5.0 Rating</strong> across 1,200+ milestone celebrations</span>
           </div>
           <div className="flex items-center justify-center gap-2.5">
             <span className="text-[#b69966] text-base">✂</span>
-            <span><strong className="text-[#1c1b1b]">100% Bespoke Alterations</strong> guaranteed across Pakistan</span>
+            <span><strong className="text-brand-dark">100% Bespoke Alterations</strong> guaranteed across Pakistan</span>
           </div>
           <div className="flex items-center justify-center gap-2.5">
             <span className="text-[#b69966] text-base">📦</span>
-            <span><strong className="text-[#1c1b1b]">White-Glove Express Delivery</strong> in heirloom keepsake boxes</span>
+            <span><strong className="text-brand-dark">White-Glove Express Delivery</strong> in heirloom keepsake boxes</span>
           </div>
         </div>
 
