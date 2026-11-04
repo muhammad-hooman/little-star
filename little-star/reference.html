@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LITTLE STAR — Dress the Future | Luxury Children's Wear</title>
+<!-- Google Fonts: Inter and Playfair Display for high-end luxury editorial balance -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration for Little Star luxury monochrome palette -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#111111',
+              dark: '#171717',
+              charcoal: '#333333',
+              gray: '#777777',
+              muted: '#A0A0A0',
+              border: '#E8E8E8',
+              surface: '#F9F9F9',
+              soft: '#F5F5F5',
+              backdrop: '#DCE5EA'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+            logo: ['Cinzel', 'serif']
+          },
+          letterSpacing: {
+            widest: '.2em',
+            tightest: '-.03em'
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom Typography Styles -->
+<style data-purpose="typography">
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #171717;
+      background-color: #DCE5EA; /* Presentation backdrop matching screenshot bezel */
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-brand-logo {
+      font-family: 'Cinzel', serif;
+    }
+    .font-editorial {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+<!-- END: Custom Typography Styles -->
+<!-- BEGIN: Interactive Transitions & Utilities -->
+<style data-purpose="ui-interactions">
+    .product-image-container {
+      position: relative;
+      overflow: hidden;
+      background-color: #f6f6f6;
+    }
+    .product-image-container img {
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .product-card:hover .product-image-container img {
+      transform: scale(1.04);
+    }
+    .hover-action-overlay {
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    /* Hide scrollbars for clean presentation */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<!-- END: Interactive Transitions & Utilities -->
+</head>
+<body class="p-0 md:p-6 lg:p-8 min-h-screen">
+<!-- Main Website Canvas Container matching Reference Frame Proportions -->
+<div class="max-w-345 mx-auto bg-white shadow-2xl overflow-hidden border border-gray-200">
+<!-- BEGIN: TopAnnouncementBar -->
+<section class="bg-brand-black text-white text-[11px] uppercase tracking-widest py-2.5 px-4 text-center border-b border-neutral-800" data-purpose="announcement-bar">
+<div class="container mx-auto flex justify-between items-center text-xs">
+<span class="hidden sm:inline-block text-neutral-400 font-light">Free Nationwide Express Delivery on Orders Over PKR 10,000</span>
+<span class="mx-auto sm:mx-0 font-medium tracking-wider">Discover the Latest Collection | LITTLE STAR — Dress the Future</span>
+<div class="hidden sm:flex items-center space-x-4 text-neutral-400">
+<span>WhatsApp: +92 300 1234567</span>
+<span class="border-l border-neutral-700 pl-3">PKR (Rs.)</span>
+</div>
+</div>
+</section>
+<!-- END: TopAnnouncementBar -->
+<!-- BEGIN: MainHeader -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-brand-border">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<!-- Brand Wordmark -->
+<div class="shrink-0 flex flex-col items-start">
+<a class="group inline-block" data-purpose="brand-logo" href="#">
+<span class="font-brand-logo text-2xl md:text-3xl font-bold tracking-tight text-brand-black flex items-center gap-1.5">
+              LITTLE STAR
+              <svg class="w-3.5 h-3.5 fill-brand-black inline-block -mt-1" viewbox="0 0 24 24">
+<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+</svg>
+</span>
+<span class="block text-[9px] uppercase tracking-widest text-brand-muted font-medium -mt-1 group-hover:text-brand-black transition-colors">Dress the Future</span>
+</a>
+</div>
+<!-- Center Primary Navigation -->
+<nav class="hidden lg:flex items-center space-x-7 text-[13px] uppercase font-medium tracking-wide text-brand-charcoal" data-purpose="primary-navigation">
+<a class="text-brand-black font-semibold border-b-2 border-brand-black pb-1" href="#">Home</a>
+<a class="hover:text-brand-black hover:border-b-2 hover:border-brand-black pb-1 transition-all" href="#new-arrivals">New Arrivals</a>
+<a class="hover:text-brand-black hover:border-b-2 hover:border-brand-black pb-1 transition-all" href="#casual-dressing">Casual Dressing</a>
+<a class="hover:text-brand-black hover:border-b-2 hover:border-brand-black pb-1 transition-all" href="#coat-pant">Coat Pant</a>
+<a class="hover:text-brand-black hover:border-b-2 hover:border-brand-black pb-1 transition-all" href="#sherwani">Sherwani</a>
+<a class="hover:text-brand-black hover:border-b-2 hover:border-brand-black pb-1 transition-all" href="#prince-coat">Prince Coat</a>
+<a class="text-red-700 hover:text-red-800 pb-1 font-semibold flex items-center gap-1" href="#sale">
+            Sale
+            <span class="w-1.5 h-1.5 bg-red-600 rounded-full animate-ping"></span>
+</a>
+</nav>
+<!-- Right Quick Actions: Search, Account, Wishlist, Cart -->
+<div class="flex items-center space-x-4 md:space-x-5 text-brand-charcoal" data-purpose="header-actions">
+<!-- Search Icon Button -->
+<button aria-label="Search items" class="p-1 hover:text-black transition-colors">
+<svg class="w-5 h-5 stroke-[1.6]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<!-- User Profile -->
+<a aria-label="User Account" class="p-1 hover:text-black transition-colors hidden sm:block" href="#account">
+<svg class="w-5 h-5 stroke-[1.6]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+<!-- Wishlist Heart -->
+<a aria-label="Wishlist" class="p-1 hover:text-black transition-colors relative" href="#wishlist">
+<svg class="w-5 h-5 stroke-[1.6]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="absolute -top-1 -right-1 text-[9px] bg-brand-charcoal text-white w-3.5 h-3.5 rounded-full flex items-center justify-center font-bold">2</span>
+</a>
+<!-- Shopping Bag Cart with Counter -->
+<a aria-label="Cart" class="p-1 hover:text-black transition-colors flex items-center gap-1.5 border border-brand-border px-2.5 py-1.5 rounded-sm hover:border-black" href="#cart">
+<svg class="w-5 h-5 stroke-[1.6]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25c-.67 0-1.189-.578-1.119-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-xs font-semibold">0</span>
+</a>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<main>
+<!-- BEGIN: HeroBanner -->
+<section class="relative bg-[#FAFAFA] border-b border-brand-border overflow-hidden" data-purpose="hero-carousel">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 min-h-145 lg:min-h-160 items-stretch">
+<!-- Left Content Box -->
+<div class="lg:col-span-6 px-8 sm:px-14 lg:px-20 py-16 lg:py-24 flex flex-col justify-center relative z-10">
+<span class="text-xs uppercase tracking-widest text-brand-muted font-semibold mb-4 block">New Season 2025 / Luxury Kids</span>
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-brand-black leading-[1.08] mb-6">
+              Little Stars.<br/>
+              Big Style.
+            </h1>
+<p class="text-brand-gray text-sm sm:text-base leading-relaxed max-w-md mb-8 font-normal">
+              Discover timeless outfits for everyday adventures, special celebrations, and unforgettable little moments. Handcrafted perfection for ages 1-13.
+            </p>
+<!-- CTA Actions -->
+<div class="flex flex-wrap items-center gap-4">
+<a class="inline-flex items-center justify-center bg-brand-black text-white px-8 py-3.5 text-xs font-semibold uppercase tracking-wider hover:bg-neutral-800 transition-all shadow-sm" href="#featured-collection">
+                Shop Collection →
+              </a>
+<a class="inline-flex items-center justify-center text-xs font-semibold uppercase tracking-wider text-brand-charcoal hover:text-black py-3.5 px-4 underline underline-offset-4 decoration-1" href="#new-arrivals">
+                Explore New Arrivals
+              </a>
+</div>
+<!-- Slide indicator dots matching original reference UI -->
+<div class="flex items-center space-x-2 mt-12">
+<span class="w-8 h-1 bg-brand-black"></span>
+<span class="w-2 h-1 bg-neutral-300"></span>
+<span class="w-2 h-1 bg-neutral-300"></span>
+<span class="w-2 h-1 bg-neutral-300"></span>
+</div>
+</div>
+<!-- Right Studio Child Model Image matching composition -->
+<div class="lg:col-span-6 relative flex items-end justify-center bg-[#F3F4F6] overflow-hidden">
+<img alt="Stylish young model in tailored luxury children's clothing" class="w-full h-full object-cover object-top max-h-160" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD5cYks7Tf8e_zfKaX2vd6XGTuhFeajcqYNxUopDtj3ahh4LcKYTjX1JfNhKmxl4mzd2im0_Z0TbBjCDsW9fYiBVDWF9kSzE3r5XRaAhZTZHZqnPuMuJQALpL0XXq-SEYoWSZxskq5pqk2H2sZbutHybIigM2qaI582CgsUnlzhU1Vc_X4vZ491yVQpiQiqPHgf19i2laqp2iax4zfyM89M7Y1A_lqxcyWLYwHXMKt4DJKHBd5CXSu"/>
+<!-- Left and Right Floating Nav Arrows matching reference hero -->
+<button aria-label="Previous Slide" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center shadow-md hover:bg-white text-brand-charcoal transition-transform active:scale-95">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<button aria-label="Next Slide" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center shadow-md hover:bg-white text-brand-charcoal transition-transform active:scale-95">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</section>
+<!-- END: HeroBanner -->
+<!-- BEGIN: FeaturedProducts -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20" id="featured-collection">
+<div class="flex items-center justify-between mb-8 pb-4 border-b border-brand-border">
+<div>
+<h2 class="text-2xl font-bold tracking-tight text-brand-black">Featured Products</h2>
+<p class="text-xs text-brand-gray mt-1">Curated picks loved by parents &amp; kids</p>
+</div>
+<a class="text-xs font-semibold uppercase tracking-wider text-brand-black hover:text-neutral-600 flex items-center gap-1 group" href="#all-products">
+            View All Products
+            <span class="inline-block transition-transform group-hover:translate-x-1">→</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+<!-- Product 1: Premium Casual Shirt -->
+<div class="product-card group" data-purpose="product-card">
+<div class="product-image-container aspect-3/4 relative rounded-none">
+<img alt="Premium Casual Shirt for Boys" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa1ZdZJa_rs6beBRYfQBddKvPaYsES9mXcar8wrapM9E52vdeXPjMFXHC5mFf4eMOVL5vPl6GKB4GqgTyyQ5i7w7AkskFztug8iUQ9KzUEiW_K8ieJnx4A3h0A_XCLTAIAHUVsBHSoqS58WNnomVxPSb9S2fuauP6dchV3zruP4qkkxywfsS1Z9k0oL7IegrGYusy6hhpqGQHtQnduC6uBmWhmSxY-sBTCT1lEPchTEfor5VHZdxGP"/>
+<button aria-label="Save to Wishlist" class="absolute top-3 right-3 p-2 rounded-full bg-white/80 hover:bg-white text-brand-charcoal shadow-sm transition-colors">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</button>
+<div class="absolute inset-x-3 bottom-3 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="w-full bg-brand-black text-white text-xs font-medium py-2.5 uppercase tracking-wider hover:bg-neutral-800">
+                  Quick View
+                </button>
+</div>
+</div>
+<div class="mt-4">
+<p class="text-[11px] text-brand-muted uppercase tracking-wider">Ages 2Y - 10Y</p>
+<h3 class="text-sm font-semibold text-brand-dark mt-1 group-hover:text-neutral-600 transition-colors">
+<a href="#">Premium Casual Shirt</a>
+</h3>
+<p class="text-sm font-semibold text-brand-black mt-1">PKR 4,500</p>
+</div>
+</div>
+<!-- Product 2: Kids' Cotton Kurta -->
+<div class="product-card group" data-purpose="product-card">
+<div class="product-image-container aspect-3/4 relative rounded-none">
+<img alt="Kids Pure Cotton Kurta" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNA3tOxEOGKUBsFFjkmleRAX_ip5Lnuew10TLoNShLbt5KPepLQGLkazXgZicAKeS2UxBWdz5VrBt1tCjaTjXRBjH5lhVC4jAUHFhGomdG8sTNQjtto38Lwi3FmErXA738R8EJxilQXtQJTwhsCL17kdvJ7vOJMJCI9EvPn8UKM90n2x-wwhMbDBtPomQy5Jy-4pJ1aH3hg5V1u6px9HPmqf2e5Lrk6ya-JBQv0CUXXygRC3kZqVx9"/>
+<button aria-label="Save to Wishlist" class="absolute top-3 right-3 p-2 rounded-full bg-white/80 hover:bg-white text-brand-charcoal shadow-sm transition-colors">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</button>
+<div class="absolute inset-x-3 bottom-3 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="w-full bg-brand-black text-white text-xs font-medium py-2.5 uppercase tracking-wider hover:bg-neutral-800">
+                  Quick View
+                </button>
+</div>
+</div>
+<div class="mt-4">
+<p class="text-[11px] text-brand-muted uppercase tracking-wider">Ages 3Y - 12Y</p>
+<h3 class="text-sm font-semibold text-brand-dark mt-1 group-hover:text-neutral-600 transition-colors">
+<a href="#">Kids' Cotton Kurta</a>
+</h3>
+<p class="text-sm font-semibold text-brand-black mt-1">PKR 5,800</p>
+</div>
+</div>
+<!-- Product 3: Classic Coat Pant Suit -->
+<div class="product-card group relative" data-purpose="product-card">
+<div class="product-image-container aspect-3/4 relative rounded-none border border-neutral-300">
+<span class="absolute top-3 left-3 bg-brand-black text-white text-[9px] font-semibold tracking-wider px-2 py-0.5 uppercase z-10">New</span>
+<img alt="Classic Formal Coat Pant Suit for Kids" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSEU2wYPcGk50LKixVLakLj1nydAykbl0y-KGjfCkI-o95UQtk3PAQ_EEfkGU8PYuqVmVwlCvM6QWrkLnPjniEmKJYZ6G-yywQu7qYhOLO2EsFNpEbzJ22wZqhFfLGknzi3bWb40Tsu2-3ugkp2fOZeZu_2AR7Sue1QZYSLJj3YEpCi4qoHydV6YOE-Sa6wjwnKWPe99t5CG1tor4GhtkdcJ-XOGSqBQqm8bKiGuwMjwY7BhIdWLpX"/>
+<div class="absolute inset-x-2 bottom-2 bg-white/95 p-2 shadow-sm border border-neutral-200 flex items-center justify-between text-xs">
+<button class="font-medium hover:text-black flex items-center gap-1 text-[11px]">
+                  Add To Cart
+                  <span>→</span>
+</button>
+<div class="flex items-center space-x-1.5 text-neutral-500">
+<span class="text-[10px] bg-neutral-100 px-1.5 py-0.5 text-neutral-700">Quick View</span>
+<button class="hover:text-black">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-4">
+<p class="text-[11px] text-brand-muted uppercase tracking-wider">Ages 4Y - 13Y</p>
+<h3 class="text-sm font-semibold text-brand-dark mt-1 group-hover:text-neutral-600 transition-colors">
+<a href="#">Classic Coat Pant Suit</a>
+</h3>
+<p class="text-sm font-semibold text-brand-black mt-1">PKR 16,500</p>
+</div>
+</div>
+<!-- Product 4: Elegant Prince Coat -->
+<div class="product-card group" data-purpose="product-card">
+<div class="product-image-container aspect-3/4 relative rounded-none">
+<img alt="Boys Royal Prince Coat" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB92k2Eu1s7gxOllDSvdc5WI3WAJisXSBS9flfwjjvL4seXkWjLAJK0YR6eYe7bst6YsiPwGUAmQ_HFP_7J99_aYSwAleWc8lLCOlbHD0gzF6ld36v54DSk_fWe7qEylITczxStdEcXR8PTt6rUiDA5oLAu_2xbQhBSu_vzBcmt_SfxKLge6kWES1b5qBFzxYwRBKKzxFAWQUAnqBMT2F72GHgYERwBj8w9WzGINSB_ww1C4Ydm48QP"/>
+<button aria-label="Save to Wishlist" class="absolute top-3 right-3 p-2 rounded-full bg-white/80 hover:bg-white text-brand-charcoal shadow-sm transition-colors">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</button>
+<div class="absolute inset-x-3 bottom-3 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="w-full bg-brand-black text-white text-xs font-medium py-2.5 uppercase tracking-wider hover:bg-neutral-800">
+                  Quick View
+                </button>
+</div>
+</div>
+<div class="mt-4">
+<p class="text-[11px] text-brand-muted uppercase tracking-wider">Ages 2Y - 13Y</p>
+<h3 class="text-sm font-semibold text-brand-dark mt-1 group-hover:text-neutral-600 transition-colors">
+<a href="#">Elegant Prince Coat</a>
+</h3>
+<p class="text-sm font-semibold text-brand-black mt-1">PKR 18,200</p>
+</div>
+</div>
+</div>
+<div class="flex justify-center items-center space-x-2 mt-10">
+<span class="w-2 h-2 rounded-full bg-brand-black"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-neutral-300"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-neutral-300"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-neutral-300"></span>
+</div>
+</section>
+<!-- END: FeaturedProducts -->
+<!-- BEGIN: EditorialBannersGrid -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8" data-purpose="editorial-campaign-grid">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+<div class="lg:col-span-7 bg-[#EFEFEF] relative min-h-110 lg:min-h-135 flex items-center p-8 sm:p-12 overflow-hidden group">
+<img alt="Little Street Wear Campaign" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-90 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrokJeVORIhZLZ6UivfcbgwJVi4NqQjc5Cdoc4Wd0zfx2A40QymK6lAKzIgExApQLGiKtm0cuFtPr05CgV-jd3VY2svEPKXkxC6hiUSmraBEnEz1wdb0dX16xVAG2BETbTOF6eAgrwXlM-rlUQ67Mj23JWn-_n4NbCs6UdzVX5qbfnOumABQ78zhdepO42SUTFJO_rKg1BfTHQdSkszhg6Wmj6T9DfbMhz3YFBaW_aknh2h_CXT6cT"/>
+<div class="relative z-10 max-w-sm bg-white/80 backdrop-blur-sm p-6 sm:p-8">
+<span class="text-[10px] uppercase tracking-widest text-brand-gray font-semibold block mb-2">Casual Collection</span>
+<h3 class="text-3xl sm:text-4xl font-bold tracking-tight text-brand-black mb-3">
+                Little Street Wear.
+              </h3>
+<p class="text-xs text-brand-gray leading-relaxed mb-6 font-normal">
+                Everyday essentials crafted with ultra-soft organic cotton for effortless little adventures.
+              </p>
+<a class="inline-flex items-center text-xs font-semibold uppercase tracking-wider text-brand-black hover:text-neutral-600 group-link" href="#casual-dressing">
+                Shop Collection
+                <span class="ml-1.5 transition-transform group-hover:translate-x-1">→</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col gap-6">
+<div class="bg-[#F5F5F7] p-8 flex-1 flex flex-col justify-between relative overflow-hidden group min-h-62.5">
+<div class="relative z-10 max-w-60">
+<span class="text-[10px] uppercase tracking-widest text-brand-muted font-semibold block mb-1">Tailored Sartorial</span>
+<h4 class="text-2xl font-bold text-brand-black tracking-tight mb-2">Classic Coat Pant.</h4>
+<p class="text-xs text-brand-gray mb-4">A refined Italian-cut silhouette for special moments.</p>
+<a class="text-xs font-semibold uppercase tracking-wider text-brand-black hover:underline flex items-center gap-1" href="#coat-pant">
+                  Explore Collection →
+                </a>
+</div>
+<img alt="Boy in tailored coat pant suit" class="absolute right-0 top-0 bottom-0 w-1/2 object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOHZj7Sep-7290IsgdzITdlnbtIx0TGNaA-iXSGMyu6RrqjvDbWlcExEEXGAjA_X2uQn1HuhdY7Ec1RWTRp34OkCT3M8mpOhFuYxIl0E_I7LHBx_ORIByEqdXuu94Ye4sRA04V6bbTCrIQVN0IRve6ylZ8tCBSX9sXTbxnVrW1CtO65TqU88u9mUrOWtTAxF9-yMP_mjxqdwgp61w8RsmaHSDPgZyzxfa-SuU04I4u5IsH6fi218oj"/>
+</div>
+<div class="bg-[#ECEAE6] p-8 flex-1 flex flex-col justify-between relative overflow-hidden group min-h-62.5">
+<div class="relative z-10 max-w-60">
+<span class="text-[10px] uppercase tracking-widest text-brand-muted font-semibold block mb-1">Heritage Edition</span>
+<h4 class="text-2xl font-bold text-brand-black tracking-tight mb-2">Traditional Elegance.</h4>
+<p class="text-xs text-brand-gray mb-4">Handcrafted festive Sherwanis with subtle threadwork.</p>
+<a class="text-xs font-semibold uppercase tracking-wider text-brand-black hover:underline flex items-center gap-1" href="#sherwani">
+                  Explore Formal Wear →
+                </a>
+</div>
+<img alt="Festive traditional children's wear" class="absolute right-0 top-0 bottom-0 w-1/2 object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi5XjgVAm49nLl3SG-Cv4VhO8UarmBdhkomskNtwMHHSqRW4WxgCXj0lYTznetTQ4YdpGFZx5a3GWrghwgHsGJdjfR9riJYevfRm_Q_PPer7qMEw5TPJ2Jj01HmSU8MEwJVMXsrtAlZEa1kgGw0MAr6psC8qnf0MBoC6A3RWJaZPLH0eF_CfvP7QLymE-ALK14G8nXvJj7upPcM3Ji2MvLn_Bw_tF97bBWQIAbhP93atG5jbSGydTL"/>
+</div>
+</div>
+</div>
+</section>
+<!-- END: EditorialBannersGrid -->
+<!-- BEGIN: TestimonialSection -->
+<section class="py-16 sm:py-24 border-y border-brand-border bg-brand-surface my-12" data-purpose="customer-testimonial">
+<div class="max-w-4xl mx-auto px-6 text-center">
+<div class="font-editorial text-7xl lg:text-8xl text-neutral-300 leading-none select-none mb-2">
+            “
+          </div>
+<p class="font-editorial text-lg sm:text-2xl md:text-3xl text-brand-dark italic leading-relaxed max-w-3xl mx-auto font-normal">
+            Beautiful designs, exquisite craftsmanship, and outfits that made our little boy look and feel extraordinary on his first royal occasion.
+          </p>
+<div class="mt-6">
+<p class="text-xs uppercase font-semibold tracking-widest text-brand-black">Ayesha &amp; Farhan K.</p>
+<p class="text-[11px] text-brand-muted tracking-wider mt-0.5">Lahore, Pakistan</p>
+</div>
+<div class="flex items-center justify-center space-x-3 mt-8 text-neutral-400">
+<button class="hover:text-black p-1 transition-colors">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<span class="w-1.5 h-1.5 rounded-full bg-brand-black"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-neutral-300"></span>
+<button class="hover:text-black p-1 transition-colors">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</section>
+<!-- END: TestimonialSection -->
+<!-- BEGIN: FlashSalesSection -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" data-purpose="flash-sales" id="sale">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between mb-8 pb-4 border-b border-brand-border gap-4">
+<div>
+<div class="flex items-center gap-3">
+<h2 class="text-2xl font-bold tracking-tight text-brand-black">Flash Sales</h2>
+<span class="bg-red-500 text-white text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-none">Limited Period</span>
+</div>
+<p class="text-xs text-brand-gray mt-1">Exclusive discounts on signature seasonal garments</p>
+</div>
+<div class="flex items-center text-xs font-medium text-brand-charcoal space-x-1.5">
+<span class="text-neutral-500">Ends In :</span>
+<span class="bg-neutral-100 font-bold px-2 py-1 rounded-sm text-brand-black">02d</span>
+<span>:</span>
+<span class="bg-neutral-100 font-bold px-2 py-1 rounded-sm text-brand-black">08h</span>
+<span>:</span>
+<span class="bg-neutral-100 font-bold px-2 py-1 rounded-sm text-brand-black">45m</span>
+<span>:</span>
+<span class="bg-neutral-100 font-bold px-2 py-1 rounded-sm text-brand-black" id="seconds-counter">12s</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+<!-- Sale Item 1 -->
+<div class="product-card group" data-purpose="sale-card">
+<div class="product-image-container aspect-3/4 relative">
+<span class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 z-10">-35%</span>
+<img alt="Casual Shirt Set" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD95JUaeJeWIzX42M58-3Xh2qGBZ6ZzmxZilSIY-VJgLMN4MepAxbRTqqGif4Up_u8yK4dM3rpoBIwmwqUNsaZQ8DaB_BjHzK8aX9Z4UxdQ6poSdLzXN4gsKeSfpTmEllyKUzycdo_rTB_Y593mFJNPYCgE7gtt7rqTa1hTGYXboyGhVxV-Lo5ebXdvcIaYG1CTpjCdQMqsXiYFiWY4krZWk31W6tfjhC_L4pmCYh5H83-XOWzF3JpL"/>
+</div>
+<div class="mt-4">
+<h3 class="text-sm font-semibold text-brand-dark">Casual Shirt Set</h3>
+<div class="flex items-center space-x-2 mt-1">
+<span class="text-sm font-bold text-red-600">PKR 4,200</span>
+<span class="text-xs text-brand-muted line-through font-normal">PKR 6,500</span>
+</div>
+</div>
+</div>
+<!-- Sale Item 2 -->
+<div class="product-card group" data-purpose="sale-card">
+<div class="product-image-container aspect-3/4 relative">
+<span class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 z-10">-30%</span>
+<img alt="Kids Waistcoat Outfit" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTN2THzMPRStUTr9zUlKZQroTHbmQkAtgpasPwz00ax26YeH3ol0cZQLf2tuu9z9sgScNbdPjP25cmUKT83sVP6nPvwsLuMVVVjAkEclN4K-2fvm22V2O8gh-4S7ROf3vuHqjVIHw8LJ9ELnMiDqGyA3icQlXLe3qkVfDe17JGqZD25BxS2eyb3dZwPvgCBO6LBeiBK4Nglro6aeKP0fkD7pPpTrox99wINJVN2BMJzjxmmbRzMxDJ"/>
+</div>
+<div class="mt-4">
+<h3 class="text-sm font-semibold text-brand-dark">Kids' Waistcoat Outfit</h3>
+<div class="flex items-center space-x-2 mt-1">
+<span class="text-sm font-bold text-red-600">PKR 6,200</span>
+<span class="text-xs text-brand-muted line-through font-normal">PKR 8,900</span>
+</div>
+</div>
+</div>
+<!-- Sale Item 3 -->
+<div class="product-card group" data-purpose="sale-card">
+<div class="product-image-container aspect-3/4 relative">
+<span class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 z-10">-25%</span>
+<img alt="Formal Coat Pant Suit" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB98udwtWBlJ2FPB4L_O30bDmpie8SSObMq40N6QvPr3lTVmJbgHrN9E3ID-aiv-KepaAB8adEr8a0dWIgpNnv-PKwFMCGSb5PVRyla2zui_6Wp5PPVSEwIOlj3pwF7-FWMlJgbeepebMJJEloV2e8GFSB-PSl1UnBGWM8Kk7h-MrUnJAZF5YMuwmSjU5OAGDRg1C22O_rSwcvvI85HJLRci_PayJNFBVXmIjPscwNBgJGQquAZbhX7"/>
+</div>
+<div class="mt-4">
+<h3 class="text-sm font-semibold text-brand-dark">Formal Coat Pant Suit</h3>
+<div class="flex items-center space-x-2 mt-1">
+<span class="text-sm font-bold text-red-600">PKR 14,500</span>
+<span class="text-xs text-brand-muted line-through font-normal">PKR 19,500</span>
+</div>
+</div>
+</div>
+<!-- Sale Item 4 -->
+<div class="product-card group" data-purpose="sale-card">
+<div class="product-image-container aspect-3/4 relative">
+<span class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 z-10">-24%</span>
+<img alt="Festive Sherwani" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXMevKAsI9Kb297wibBbX8amnXYyISofXvbxn_QzpZREKVAqdQrmECMvmO8hi7_iqVqZ3YCGz1aNHUKF7mTo26uzBrbx66NbM_3xXBz9O2kcd4hzktfynVqga906rmJ5QxlxMPHTVKiSy4SlLG5ZJWvzVHml67ObaZe6Q0DEOuRFZJb64h_0rocWVUYRazj3MtpICnjQVYmem_tBcL3T3bHnLrrhdEIa-cbcKPUG97v5kG27VEhtcz"/>
+</div>
+<div class="mt-4">
+<h3 class="text-sm font-semibold text-brand-dark">Festive Sherwani</h3>
+<div class="flex items-center space-x-2 mt-1">
+<span class="text-sm font-bold text-red-600">PKR 16,800</span>
+<span class="text-xs text-brand-muted line-through font-normal">PKR 22,000</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: FlashSalesSection -->
+<!-- BEGIN: WideEditorialBanner -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8" data-purpose="wide-editorial-banner">
+<div class="bg-[#ECEEF0] border border-neutral-200 overflow-hidden grid grid-cols-1 md:grid-cols-12 items-center">
+<div class="md:col-span-5 h-85 md:h-100">
+<img alt="Young model wearing jacket in casual urban setting" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA13Ad-HhVxjF9JgHgst9URKs4iyPE2D7PzvmrnntbPzbvWrk7BRMsfH8lwVIA4vg3rQf_rU8eZCMxD2tOww4fRhg-UGO8L1A5ZLC5iFpMKzYU9emjSEgbAchB-rZMafZ-0aJdoJskD6867PyLsC3ZT5Ry5jsZ8s6EVyUBvHBVvKWe3Y3DpcnWtjSsC_LlXgaNb0kYVuJD329eTAUgMAcLzUThTsTbamM41sO1T12Zs08nzT_9ksgxe"/>
+</div>
+<div class="md:col-span-7 p-8 sm:p-14 lg:p-16">
+<span class="text-[10px] uppercase font-bold tracking-widest text-brand-muted block mb-2">Winter &amp; Spring '25 Edition</span>
+<h3 class="text-3xl sm:text-4xl font-bold tracking-tight text-brand-black mb-4">
+              The Little Gentleman Selection
+            </h3>
+<p class="text-sm text-brand-gray leading-relaxed max-w-lg mb-8">
+              From everyday playtime outfits to bespoke occasion tuxedos, discover timeless garments made with breathability, ease of movement, and enduring tailoring.
+            </p>
+<a class="inline-block bg-brand-black text-white text-xs font-semibold uppercase tracking-wider px-8 py-3.5 hover:bg-neutral-800 transition-colors" href="#coat-pant">
+              Discover The Collection →
+            </a>
+</div>
+</div>
+</section>
+<!-- END: WideEditorialBanner -->
+<!-- BEGIN: OccasionWearMoments -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" data-purpose="occasion-categories">
+<div class="text-center max-w-2xl mx-auto mb-12">
+<span class="text-xs uppercase font-semibold tracking-widest text-brand-muted block mb-1">Tailored for Milestones</span>
+<h2 class="text-3xl font-bold tracking-tight text-brand-black">Made for Special Moments</h2>
+<div class="w-12 h-0.5 bg-brand-black mx-auto mt-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Category 1 -->
+<div class="group relative overflow-hidden bg-neutral-100 aspect-4/5 flex items-end p-8">
+<img alt="Weddings and celebrations children's clothing" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC7ZYWcXX4tBPhxQkUCTvFMXESokVH8zoPpnujsK-njRUM82jg7KmxzQpZOHwYoj5PeWaUIht8nUl5fTJaJPc_gfNlASSN_xfMjCPvgZbhILnZKz97Drb4sZJmXmtqMAkG6v6E5Lp8N75MfRxyJThUDxp-6JWHEtUEAVqkRTRYU6cZ7I9yf307DzwlHqrqLnzDH5DiaU52aC2hMgS9gH6uhHKhSXf-u9Ed2hbVi6CEJAEhOpbhZKB4"/>
+<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="relative z-10 text-white">
+<span class="text-[10px] uppercase tracking-widest text-neutral-300 font-medium">Bespoke Suits</span>
+<h3 class="text-xl font-bold mt-1 mb-2">Weddings &amp; Celebrations</h3>
+<a class="text-xs font-semibold uppercase tracking-wider underline underline-offset-4 hover:text-neutral-200" href="#coat-pant">
+                Explore Coat Pants →
+              </a>
+</div>
+</div>
+<!-- Category 2 -->
+<div class="group relative overflow-hidden bg-neutral-100 aspect-4/5 flex items-end p-8">
+<img alt="Eid and festive wear for boys" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIr-AAEDYVwwzTvslv_ixJ1SJvguu3DHZeWKoV0HsCqtwfc8S_KKKGIb3jzEEljT3futBI6Cypt6lgDEEK6E5Wa6EEY9NYC3NhZAI1Jm3sJ-k6jOVcpOiI_2-vepAbJWBHURC-TCz1J5EUeYGre8mEEe5Q3ckuHsddEnL9sXqttGNF8E_X_GxXLv_96jgMY6M8yi3zsHozfBPgsQ4w397nIa0gdeCe7V5q6JFkOGQgXJ3_c7xF1Zjq"/>
+<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="relative z-10 text-white">
+<span class="text-[10px] uppercase tracking-widest text-neutral-300 font-medium">Eastern Heritage</span>
+<h3 class="text-xl font-bold mt-1 mb-2">Eid &amp; Festive Sherwanis</h3>
+<a class="text-xs font-semibold uppercase tracking-wider underline underline-offset-4 hover:text-neutral-200" href="#sherwani">
+                Shop Festive Wear →
+              </a>
+</div>
+</div>
+<!-- Category 3 -->
+<div class="group relative overflow-hidden bg-neutral-100 aspect-4/5 flex items-end p-8">
+<img alt="Prince Coat Regal Collection" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDk-8D9UXdvwXEG-6QTj2-dLcbkWd31Onj4P0Cflaw1zif4bjtYCbhSVq95fCzC2w056P-2afAxvXLHHz9yn8h7xtCW9KJA3xsSLXR93eiBxMRBnqyC7jjnYlmVbusTvUCmSj2XWTGeKOBZNW70T8Ll2uP6ci_RsmGhLRWsJv7gYICqn3FxY7ubaRn-PBVnYm5atQ0vLdKw3_06a7Nfuf72XlWSDlyxpYjAVaKCcBLRc6XGjaQa29iK"/>
+<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="relative z-10 text-white">
+<span class="text-[10px] uppercase tracking-widest text-neutral-300 font-medium">Regal Cut</span>
+<h3 class="text-xl font-bold mt-1 mb-2">Royal Prince Collection</h3>
+<a class="text-xs font-semibold uppercase tracking-wider underline underline-offset-4 hover:text-neutral-200" href="#prince-coat">
+                View Prince Coats →
+              </a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: OccasionWearMoments -->
+<!-- BEGIN: QuoteOfTheDay -->
+<section class="py-16 text-center border-t border-b border-brand-border bg-white" data-purpose="quote-of-the-day">
+<div class="max-w-3xl mx-auto px-6">
+<h4 class="text-xs uppercase font-bold tracking-widest text-brand-muted mb-4">Quote Of The Day</h4>
+<blockquote class="font-editorial text-xl sm:text-2xl text-brand-dark italic max-w-xl mx-auto">
+            "Little moments become beautiful memories. Dress them with love, confidence, and comfort."
+          </blockquote>
+<div class="w-8 h-px bg-brand-charcoal mx-auto mt-4 mb-2"></div>
+<cite class="text-[11px] uppercase tracking-wider text-brand-gray font-medium not-italic">— Little Star Philosophy</cite>
+</div>
+</section>
+<!-- END: QuoteOfTheDay -->
+<!-- BEGIN: OurJournal -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20" data-purpose="journal-articles" id="journal">
+<div class="flex items-center justify-between mb-10 pb-4 border-b border-brand-border">
+<div>
+<h2 class="text-2xl font-bold tracking-tight text-brand-black">Our Journal</h2>
+<p class="text-xs text-brand-gray mt-1">Style guides, styling tips &amp; festive inspirations</p>
+</div>
+<a class="text-xs font-semibold uppercase tracking-wider text-brand-black hover:text-neutral-600 flex items-center gap-1 group" href="#all-articles">
+            All Articles
+            <span class="inline-block transition-transform group-hover:translate-x-1">→</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<article class="group cursor-pointer">
+<div class="aspect-16/10 overflow-hidden bg-neutral-100 mb-4">
+<img alt="Child posing casually with confident smile" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA3_mVDWHOul7X5cmpjJsYslkcXXcZI4zKv56OAGF7dwOwfMtaRVXUVDH1FTaEYLKHOaqQ3AUQUqbd9dcGzIb14Jl6BTO5OVEQs0RPeMcQBkUrD3enLWOaguM3J8sdDoJF1XPwKGag9DPjPYT1zw5b9Om_eyX4ftDIsf6sPXd8WteZIhKSGlJUZDL6dvNjlo7eIFLdXN-45vaose3aizsTVd3QXgYkLiEgYVZ-CKqEG4VBx8jWHd2M"/>
+</div>
+<div class="flex items-center gap-3 text-[11px] text-brand-muted uppercase tracking-wider mb-2">
+<span class="font-bold text-brand-black">22 Oct</span>
+<span>•</span>
+<span>Style Guide</span>
+</div>
+<h3 class="text-base font-bold text-brand-dark group-hover:text-neutral-600 transition-colors leading-snug">
+              Top 10 Casual Look Ideas To Dress Up Your Kids in 2025
+            </h3>
+<p class="text-xs text-brand-gray mt-2 line-clamp-2">
+              Balancing playground practicality with contemporary silhouette cuts for busy school days and weekends.
+            </p>
+<span class="inline-block text-xs font-semibold text-brand-black mt-3 group-hover:underline">Read Article →</span>
+</article>
+<article class="group cursor-pointer">
+<div class="aspect-16/10 overflow-hidden bg-neutral-100 mb-4">
+<img alt="Boy in tailored wedding suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYPEPhAEIqLgFatVCC-WEkMoG1SEgUv_VARzEWqtusJa7TbGB6I-Vtwy1lCIQXUhtwBpO2OxMDe_woXgbfCIf2BNJS-m3MpTAqmPXoyAvgr04vbOmJ1HD22ocAA9vQz11OWrSCfRd_lPy3TcmterPla6VoaMDaf39NutH4ywP8_KcekC4OhTQHM4JoQ-uDl1TFUvaqj4fKv_cGAik_fYt7z_Lm4AABzX6sYU-wXs5iK3ucKCJ4bXMC"/>
+</div>
+<div class="flex items-center gap-3 text-[11px] text-brand-muted uppercase tracking-wider mb-2">
+<span class="font-bold text-brand-black">25 Oct</span>
+<span>•</span>
+<span>Weddings</span>
+</div>
+<h3 class="text-base font-bold text-brand-dark group-hover:text-neutral-600 transition-colors leading-snug">
+              How to Style Your Little Gentleman For a Wedding
+            </h3>
+<p class="text-xs text-brand-gray mt-2 line-clamp-2">
+              From coordinating custom pocket squares to picking lightweight suiting fabrics that keep young ones cheerful.
+            </p>
+<span class="inline-block text-xs font-semibold text-brand-black mt-3 group-hover:underline">Read Article →</span>
+</article>
+<article class="group cursor-pointer">
+<div class="aspect-16/10 overflow-hidden bg-neutral-100 mb-4">
+<img alt="Festive Eastern outfits for festive occasions" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa3bhadm3-aO-_EkMEgb1AbLpflCgEUfr-sxxUMLJp6mCJzX4ELYdqhw414dJHgQmlStDxXXdSe0mI4yymtvq5HJksdVKxaFQEiaQ2i8HB7e-6PDKMSQEU-tMhnwxrPSX1veSXpiu1vFd9ucCv4rLS-e1wefWKxDST5o9agjeFhx0Ji0DoTWRvCi2oQLL4-b1bVEWSs-qi2e2Lr_VOsJ_bPTjKRfWn2ZjCDYMdJhaazgwoFUvQDJhB"/>
+</div>
+<div class="flex items-center gap-3 text-[11px] text-brand-muted uppercase tracking-wider mb-2">
+<span class="font-bold text-brand-black">28 Oct</span>
+<span>•</span>
+<span>Festive Heritage</span>
+</div>
+<h3 class="text-base font-bold text-brand-dark group-hover:text-neutral-600 transition-colors leading-snug">
+              Traditional Sherwanis &amp; Prince Coats For Eid
+            </h3>
+<p class="text-xs text-brand-gray mt-2 line-clamp-2">
+              A tribute to royal Eastern tailoring, jamawar trims, and comfortable ban collars designed for little leaders.
+            </p>
+<span class="inline-block text-xs font-semibold text-brand-black mt-3 group-hover:underline">Read Article →</span>
+</article>
+</div>
+</section>
+<!-- END: OurJournal -->
+<!-- BEGIN: InstagramGallery -->
+<section class="border-t border-brand-border pt-12 pb-16 bg-[#FAFAFA]" data-purpose="instagram-feed">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-8">
+<span class="text-xs uppercase font-semibold tracking-widest text-brand-muted">Follow Our Little Stars</span>
+<h3 class="text-xl font-bold tracking-tight text-brand-black mt-1">@littlestar.pk</h3>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+<div class="aspect-square overflow-hidden group relative">
+<img alt="Instagram community 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd5EmeG9Hdm3u8C1Iel3EzYtbydZrHd3SS3V-QH0AbmYKvPhSRqaZ5WeLNzXRM41T2eh_RkoAJ52O4TH7RfD64qJQEFDnG9sUmnqKd6unqLcO5yHtQkpPkdxAJLaTvqD3XETZS02KiI2oWScEHyWa4MieNYwlzUXPlqiETGrxc_5eMOEAJgRScq31EMz5m1r7FM_EZ4KnZMgBaZlui02v2ZPmv8k1CMZK0ePQ5O6K2cIZ9H9kK9Xgz"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</div>
+</div>
+<div class="aspect-square overflow-hidden group relative">
+<img alt="Instagram community 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHI18pK-g1UKTn6SsAhEsS4nVXOEK3qRrxuxvTlIKHpDPSMpTaO2yY-DTRceYAldN91EKpiUCAayV0h0eRuw2OtCrxy1MJ2QO0HvvuZilGdUpL4nwW3t_S0X1xSno2tjH4HK7DnScmFZcVrHwaOMb5PCdXg6F3Lg9r4P9j7Pt6x4tn-T7mGbLKxRw-ilJ-O6uhnSSu8PuaD1wZGOecHzchnDLdfdJUppi8OJv6RaRtDpKT7mjfk6vz"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</div>
+</div>
+<div class="aspect-square overflow-hidden group relative">
+<img alt="Instagram community 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYglHId0B3xXruVcIsfknJSsRi5XCkQjDn9NjcRcvpjeVcPSugBey5SbfAgoQ6nebIDnUZTAn3yoZAbomgk0S9-ZlsQI-adOzh0TGXTKXMcjMAXbH7oo86Qeza2KA1NIjnUDZ10_YK-kRFhciwsgYK2Ljey-SGoKVGc2d0gD8jXIH_auuswyMPj23V1wr3f7Czp0IxCf4givJ5m4Y7DOH8hDI9EK0Z_gxOhyeq5CZeMdiSi--uga8r"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</div>
+</div>
+<div class="aspect-square overflow-hidden group relative">
+<img alt="Instagram community 4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDwG3NzjrKo1Sc-XJHkOojQOmb1JYU_3ZZ3ZrugslaKGuDbM-TjmksmeguYx-QjBbgpMWsOCu8GqJVJgxY_06r4bmLHJl58UyO-B_0lud3q1vaAOdTHV8z8IzDmHbSF8Flwyg_DmFmHVwQ6hIiow3mmw8ReYlffJfnh4UQZiaym7wdXJqymoMO0RPDYXw66qDroX2iTk0xgy8oC755IHjV0NMvwjbxxonEP_lG-ra8Ck9aT25crfSV"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</div>
+</div>
+<div class="aspect-square overflow-hidden group relative">
+<img alt="Instagram community 5" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdhNq_z2rpnzvKFRrM3sch0YPWzltyovLSlwa45BD95V7bmZ3DmfOf7zEggbW9dZQ4An5UQoJUkAOJ_ZspaESlVHohmVa5G9jCUVMz21CwPXxqrSmd11qhjDK69XashbhTvb8TVIg0b_stdBM_g-dQG9kGC2QswqhlGkpbV72HHNwxBqww21gGeiFxQ4TJrwVeKOJdECV1d3w_Vziw88_-iQoS_3hf9HOcDV9jJju1qZgH7jeK0-F_"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</div>
+</div>
+<div class="aspect-square overflow-hidden group relative">
+<img alt="Instagram community 6" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7IZo2iMFUY-Jqm99ourvOjcE_Gihn-U8u5ri4iu4hfNpTiPsmJg9wR28pZE-eKl0MHbl7wFO3A2ur90liZ6jtQhZB0nHy7O-YTdhoFwGDd9ZQX6IftJucKTF2bY1lNA8EDVwmcPrd_19qBmKHEVhRaQi5_eYaYUsrT7R6vwVJ9SCLEgNi4RT7BHp9CxzLdQ2AtK0PgNXqHi6CXM4j1W2XHMS3D2jsG24yUsBhUUS4kGOcq69MAJNh"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: InstagramGallery -->
+</main>
+<!-- BEGIN: MainFooter -->
+<footer class="bg-white border-t border-brand-border text-brand-dark pt-16 pb-12" data-purpose="site-footer">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-brand-border">
+<div class="lg:col-span-4">
+<span class="font-brand-logo text-2xl font-bold tracking-tight text-brand-black flex items-center gap-1.5">
+              LITTLE STAR
+              <svg class="w-3.5 h-3.5 fill-brand-black inline-block" viewbox="0 0 24 24">
+<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+</svg>
+</span>
+<span class="block text-[10px] uppercase tracking-widest text-brand-muted font-medium mt-0.5">Dress the Future</span>
+<p class="text-xs text-brand-gray leading-relaxed mt-4 max-w-sm">
+              LITTLE STAR is Pakistan's premier luxury children's clothing atelier, delivering timeless everyday pieces and handcrafted bespoke ceremonial ensembles for ages 1 through 13.
+            </p>
+<div class="mt-6 flex items-center space-x-3 text-brand-charcoal">
+<a aria-label="Instagram" class="w-8 h-8 rounded-full border border-neutral-300 flex items-center justify-center hover:bg-black hover:text-white transition-colors" href="#">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"></path></svg>
+</a>
+<a aria-label="Facebook" class="w-8 h-8 rounded-full border border-neutral-300 flex items-center justify-center hover:bg-black hover:text-white transition-colors" href="#">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.667 5H18V0h-3.889C10.5 0 9 1.5 9 4.667V8z"></path></svg>
+</a>
+</div>
+</div>
+<div class="lg:col-span-2">
+<h4 class="text-xs uppercase font-bold tracking-widest text-brand-black mb-4">Collections</h4>
+<ul class="space-y-2 text-xs text-brand-gray">
+<li><a class="hover:text-black transition-colors" href="#new-arrivals">New Arrivals</a></li>
+<li><a class="hover:text-black transition-colors" href="#casual-dressing">Casual Dressing</a></li>
+<li><a class="hover:text-black transition-colors" href="#coat-pant">Coat Pant Suits</a></li>
+<li><a class="hover:text-black transition-colors" href="#sherwani">Festive Sherwanis</a></li>
+<li><a class="hover:text-black transition-colors" href="#prince-coat">Royal Prince Coats</a></li>
+<li><a class="hover:text-black transition-colors text-red-600 font-semibold" href="#sale">Special Sale</a></li>
+</ul>
+</div>
+<div class="lg:col-span-2">
+<h4 class="text-xs uppercase font-bold tracking-widest text-brand-black mb-4">Customer Care</h4>
+<ul class="space-y-2 text-xs text-brand-gray">
+<li><a class="hover:text-black transition-colors" href="#">Size Guide &amp; Fit</a></li>
+<li><a class="hover:text-black transition-colors" href="#">Shipping &amp; Delivery</a></li>
+<li><a class="hover:text-black transition-colors" href="#">Exchange &amp; Returns</a></li>
+<li><a class="hover:text-black transition-colors" href="#">Track Your Order</a></li>
+<li><a class="hover:text-black transition-colors" href="#">Store Locator</a></li>
+<li><a class="hover:text-black transition-colors" href="#">Contact Concierge</a></li>
+</ul>
+</div>
+<div class="lg:col-span-4">
+<h4 class="text-xs uppercase font-bold tracking-widest text-brand-black mb-2">Join The Inner Circle</h4>
+<p class="text-xs text-brand-gray mb-4">Be the first to preview festive releases and private preview sales.</p>
+<form class="space-y-2" data-purpose="newsletter-form">
+<div class="flex items-center">
+<input class="w-full text-xs border border-brand-border px-3.5 py-3 focus:outline-none focus:border-brand-black text-brand-dark rounded-none placeholder-neutral-400" placeholder="Enter your email address" required="" type="email"/>
+<button class="bg-brand-black text-white text-xs font-semibold uppercase tracking-wider px-5 py-3 hover:bg-neutral-800 transition-colors shrink-0 rounded-none border border-brand-black" type="submit">
+                  Subscribe
+                </button>
+</div>
+<p class="text-[10px] text-neutral-400">By subscribing you agree with our Privacy Policy &amp; Terms.</p>
+</form>
+</div>
+</div>
+<div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-brand-muted gap-4">
+<p>© 2025 LITTLE STAR — Dress the Future. All Rights Reserved.</p>
+<div class="flex items-center space-x-6 text-[11px]">
+<span>Privacy Policy</span>
+<span>Terms of Service</span>
+<span>Security</span>
+<span>PKR (₨)</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "little-start-root",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npm --prefix little-star run dev",
+    "build": "npm --prefix little-star run build",
+    "preview": "npm --prefix little-star run preview"
+  }
+}
+
